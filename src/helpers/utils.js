@@ -150,7 +150,7 @@ exports.communityApproveEmail = async (profileId, isApprove) => {
 exports.notificationMailOnInvite = async (userData) => {
   let name = userData?.userName;
   let msg = userData.msg;
-  let redirectUrl = `${environment.FRONTEND_URL}profile-chats`;
+  let redirectUrl = `${environment.FRONTEND_URL}chats`;
 
   const mailObj = {
     email: userData.email,
