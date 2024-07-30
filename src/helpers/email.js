@@ -13,7 +13,7 @@ let transporter = nodemailer.createTransport({
   headers: "X-PM-Message-Stream: transactional",
   host: "smtp.postmarkapp.com",
   port: 587,
-  sender: "info@ukrainianwife.tube",
+  sender: "info@ukrainewife.tube",
   auth: { user: environment.SMTP_USER, pass: environment.SMTP_PASS },
 });
 
@@ -26,7 +26,7 @@ exports.sendMail = async function (mailObj) {
     return transporter.sendMail({
       from: {
         name: "Ukrainianwife.tube",
-        address: "info@ukrainianwife.tube",
+        address: "info@ukrainewife.tube",
       },
       to: mailObj.email,
       subject: mailObj.subject,
