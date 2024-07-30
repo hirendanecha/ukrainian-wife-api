@@ -101,6 +101,9 @@ Profile.FindById = async function (profileId) {
     profile["isChatRoomCreated"] = false;
   }
   profile["profilePictures"] = profilePictures;
+  profile["profilePicName"]
+    ? profile?.profilePicName
+    : (profile["profilePicName"] = profilePictures[0]?.imageUrl);
   profile["interestList"] = interestList;
   return profile;
 };
